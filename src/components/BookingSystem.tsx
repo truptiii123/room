@@ -169,13 +169,17 @@ export default function BookingSystem() {
         )}
 
         {/* Auto Checkout Notice */}
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8">
+        <div className="bg-red-50 border-2 border-red-300 rounded-lg p-6 mb-8">
           <div className="flex items-center">
-            <Calendar className="w-5 h-5 text-blue-600 mr-3" />
+            <Clock className="w-6 h-6 text-red-600 mr-3" />
             <div>
-              <h3 className="text-lg font-medium text-blue-800">Important Notice</h3>
-              <p className="text-blue-700 mt-1">
-                All rooms have automatic checkout at 10:00 AM daily. You can check in at any time during the day or night.
+              <h3 className="text-xl font-bold text-red-800">🚨 AUTO CHECKOUT SYSTEM ACTIVE</h3>
+              <p className="text-red-700 mt-2 font-medium">
+                ⏰ ALL ROOMS AUTOMATICALLY CHECKOUT DAILY AT 10:00 AM
+              </p>
+              <p className="text-red-600 font-medium">
+                ✅ You can check in at ANY TIME during day or night<br/>
+                ⚠️ System will automatically checkout all occupied rooms at 10 AM every morning
               </p>
             </div>
           </div>
