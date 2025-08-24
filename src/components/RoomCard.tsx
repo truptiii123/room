@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Hotel, Room, hotelAPI, roomAPI, bookingAPI } from '../lib/supabase'
 import RoomCard from './RoomCard'
-import { Calendar, Users, Mail, Phone, User } from 'lucide-react'
+import { Calendar, Users, Mail, Phone, User, Clock } from 'lucide-react'
 
 interface BookingFormData {
   guestName: string
@@ -175,6 +175,11 @@ export default function BookingSystem() {
             <div>
               <h3 className="text-xl font-bold text-red-800">🚨 AUTO CHECKOUT SYSTEM ACTIVE</h3>
               <p className="text-red-700 mt-2 font-medium">
+                ⏰ ALL ROOMS AUTOMATICALLY CHECKOUT DAILY AT 10:00 AM
+              </p>
+              <p className="text-red-600 font-medium">
+                ✅ You can check in at ANY TIME during day or night<br/>
+                ⚠️ System will automatically checkout all occupied rooms at 10 AM every morning
               </p>
             </div>
           </div>
@@ -307,12 +312,11 @@ export default function BookingSystem() {
                     className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
                   >
                     Book Room
-    <div className="bg-white rounded-xl shadow-lg border-2 border-gray-200 overflow-hidden hover:shadow-xl transition-shadow">
                   </button>
-      <div className="bg-red-600 border-b-2 border-red-700 px-4 py-3">
-        <div className="flex items-center justify-center text-white text-sm font-bold animate-pulse">
-          <Clock className="w-5 h-5 mr-2 animate-spin" />
-          🚨 AUTO CHECKOUT DAILY AT 10AM 🚨
+                </div>
+              </form>
+            </div>
+          </div>
         )}
       </div>
     </div>

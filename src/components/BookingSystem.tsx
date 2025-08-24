@@ -175,7 +175,11 @@ export default function BookingSystem() {
             <div>
               <h3 className="text-xl font-bold text-red-800">🚨 AUTO CHECKOUT SYSTEM ACTIVE</h3>
               <p className="text-red-700 mt-2 font-medium">
-                ⏰ ALL ROOMS AUTOMATICALLY CHECKOUT DAILY AT 10:00 AM
+                ⏰ ALL ROOMS AUTO CHECKOUT DAILY AT 10:00 AM
+              </p>
+              <p className="text-red-600 font-medium mb-3">
+                System automatically processes checkout for all occupied rooms every morning at 10 AM.<br/>
+                Manual checkout is available anytime before automatic checkout.
               </p>
               <p className="text-red-600 font-medium">
                 ✅ You can check in at ANY TIME during day or night<br/>
@@ -184,10 +188,81 @@ export default function BookingSystem() {
             </div>
           </div>
         </div>
+                  ⏰ ALL ROOMS AUTO CHECKOUT DAILY AT 10:00 AM
+                </p>
+                <p className="text-lg font-semibold text-red-600">
+                  ✅ Check in ANY TIME during day or night
+                </p>
+                <p className="text-lg font-semibold text-red-600">
+                  ⚠️ System automatically checkouts ALL occupied rooms at 10 AM every morning
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Additional Warning Box */}
+          <div className="mt-6 bg-red-100 border-2 border-red-400 rounded-lg p-4">
+            <div className="flex items-center">
+              <AlertTriangle className="w-6 h-6 text-red-600 mr-3" />
+              <div>
+                <p className="font-bold text-red-800">IMPORTANT NOTICE:</p>
+                <p className="text-red-700 font-medium">
+                  No matter when you check in, all rooms will be automatically checked out at 10:00 AM the next day.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Booking Instructions */}
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+          <h3 className="text-lg font-bold text-blue-800 mb-3">How Our Auto-Checkout System Works:</h3>
+          <div className="grid md:grid-cols-3 gap-4 text-sm">
+            <div className="flex items-start">
+              <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 text-xs font-bold">1</div>
+              <div>
+                <p className="font-semibold text-blue-800">Check in anytime</p>
+                <p className="text-blue-600">Day or night, 24/7 availability</p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 text-xs font-bold">2</div>
+              <div>
+                <p className="font-semibold text-blue-800">Enjoy your stay</p>
+                <p className="text-blue-600">Comfortable accommodation</p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <div className="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 text-xs font-bold">3</div>
+              <div>
+                <p className="font-semibold text-red-800">Auto checkout at 10 AM</p>
+                <p className="text-red-600">Automatic daily checkout</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Real-time Status Banner */}
+        <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-8">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse mr-3"></div>
+              <span className="text-green-800 font-medium">Real-time Room Status</span>
+            </div>
+            <div className="text-sm text-green-600">
+              Last updated: {new Date().toLocaleTimeString()}
+            </div>
+          </div>
+        </div>
 
         {/* Available Rooms */}
         <div className="mb-8">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">Available Rooms</h2>
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold text-gray-900">Available Rooms</h2>
+            <div className="bg-red-100 px-4 py-2 rounded-lg">
+              <span className="text-red-800 font-bold text-sm">⏰ AUTO CHECKOUT: 10:00 AM DAILY</span>
+            </div>
+          </div>
           {loading ? (
             <div className="text-center py-8">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
