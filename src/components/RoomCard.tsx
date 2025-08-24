@@ -61,8 +61,8 @@ export default function RoomCard({ room, booking, onCheckIn, onCheckOut, onBook 
   return (
     <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow">
       {/* Auto Checkout Notice */}
-      <div className="bg-orange-50 border-b border-orange-200 px-4 py-2">
-        <div className="flex items-center justify-center text-orange-800 text-sm font-medium">
+      <div className="bg-red-50 border-b border-red-200 px-4 py-3">
+        <div className="flex items-center justify-center text-red-800 text-sm font-bold">
           <Clock className="w-4 h-4 mr-2" />
           AUTO CHECKOUT DAILY AT 10AM
         </div>
